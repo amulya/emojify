@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Emojify</title>
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+
+<body>
+
+	Welcome to Emojify! Please paste your text below:
+
+	<form method='POST'>
+		<textarea name="text"></textarea>
+		<button>Submit</button>
+	</form>
+
+	{% if result %} {{ result }} {% endif %} {% if similar_words %} {{ similar_words }} {% endif %}
+
+</body>
+
+</html>
